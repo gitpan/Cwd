@@ -1,6 +1,17 @@
 use Module::Build;
 
-my $build = Module::Build->new
+# See https://rt.cpan.org/Ticket/Display.html?id=4681 for why we add
+# this to the Makefile.PL:
+my $class = Module::Build->subclass(code => <<'EOF');
+  sub do_create_makefile_pl {
+    my $self = shift;
+    my $fh = IO::File->new('> Makefile.PL') or die $!;
+    print $fh "\nBEGIN { \@INC = grep {!/blib/} \@INC }\n\n";
+    $self->SUPER::do_create_makefile_pl(fh => $fh);
+  }
+EOF
+
+my $build = $class->new
   (
    module_name => 'Cwd',
    dist_version_from => 'Cwd.pm',
