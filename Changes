@@ -1,6 +1,15 @@
 Revision history for Perl extension Cwd.
 
+2.12  Fri Dec 19 17:04:52 CST 2003
+
+ - Fixed a bug on Cygwin - the output of realpath() should have been
+   tainted, but wasn't.  [Reported by Tom Wyant]
+
 2.10  Mon Dec 15 07:50:12 CST 2003
+
+ (Note that this release was mistakenly packaged as version 2.11, even
+ though it had an internal $VERSION variable of 2.10.  Not sure how
+ THAT happened...)
 
  - There was a dependency in the Makefile.PL on Module::Build, which
    isn't necessary.  I've removed it.

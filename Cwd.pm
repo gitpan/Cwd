@@ -139,7 +139,7 @@ use strict;
 use Exporter;
 use vars qw($VERSION @ISA @EXPORT @EXPORT_OK);
 
-$VERSION = '2.10';
+$VERSION = '2.12';
 
 @ISA = qw/ Exporter /;
 @EXPORT = qw(cwd getcwd fastcwd fastgetcwd);
@@ -566,6 +566,7 @@ sub _epoc_cwd {
         *fastgetcwd	= \&cwd;
         *fastcwd	= \&cwd;
         *abs_path	= \&fast_abs_path;
+        *realpath	= \&abs_path;
     }
     elsif ($^O eq 'epoc') {
         *cwd            = \&_epoc_cwd;
