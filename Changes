@@ -1,23 +1,6 @@
 Revision history for Perl extension Cwd.
 
-2.08_03
+0.01  Tue Aug 19 12:24:04 2003
+	- original version; created by h2xs 1.2 with options
+		-XA -n Cwd
 
- - Make sure the correct version of Cwd.pm is loaded in the regression
-   tests. [Sam Vilain]
-
- - Removed some gratuitous uses of 5.6-isms like our(), with the aim
-   of backporting this module to perl 5.005.
-
-2.08_02  Thu Aug 21 11:41:27 CDT 2003
-
- - Removed some redundant OS/2 code at the suggestion of Michael
-   Schwern and Ilya Zakharevich.
-
- - Simplified all code that autoloads Carp.pm and calls
-   carp()/croak().
-
-2.08_01  Tue Aug 19 12:24:04 2003
-
-  - Code extracted from bleadperl/maintperl and packaged as a separate
-    testing release by Ken Williams.  Very few significant changes, if
-    any.  Not released to CPAN, but circulated among a few testers.

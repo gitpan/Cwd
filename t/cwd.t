@@ -1,11 +1,11 @@
 #!./perl
 
-use Cwd;
 BEGIN {
     chdir 't' if -d 't';
 }
 
 use Config;
+use Cwd;
 use strict;
 use warnings;
 use File::Spec;

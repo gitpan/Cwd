@@ -1,12 +1,12 @@
 #!./perl -Tw
 # Testing Cwd under taint mode.
 
-use Cwd;
 BEGIN {
     chdir 't' if -d 't';
 }
 
 use strict;
+use Cwd;
 use Test::More tests => 16;
 use Scalar::Util qw/tainted/;
 
