@@ -1,9 +1,8 @@
 --- #YAML:1.0
 name: Cwd
-version: 2.17_03
+version: 2.18
 author:
-  - |-
-    Now maintained by Ken Williams <KWILLIAMS@cpan.org>
+  - Maintained by Ken Williams <KWILLIAMS@cpan.org>
 abstract: get pathname of current working directory
 license: perl
 requires:
@@ -18,5 +17,5 @@ build_requires:
 provides:
   Cwd:
     file: Cwd.pm
-    version: 2.17_03
+    version: 2.18
 generated_by: Module::Build version 0.25_01
