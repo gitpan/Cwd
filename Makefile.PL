@@ -4,7 +4,7 @@ use ExtUtils::MakeMaker;
 WriteMakefile
   (
    NAME        => 'Cwd',
-   VERSION     => '2.08_02',
+   VERSION     => '2.08_03',
    PL_FILES    => {},
    INSTALLDIRS => 'perl',
    PREREQ_PM   => {

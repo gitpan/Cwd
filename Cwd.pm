@@ -1,5 +1,4 @@
 package Cwd;
-use 5.006;
 
 =head1 NAME
 
@@ -137,12 +136,14 @@ L<File::chdir>
 =cut
 
 use strict;
+use Exporter;
+use vars qw($VERSION @ISA @EXPORT @EXPORT_OK);
 
-our $VERSION = '2.08_02';
+$VERSION = '2.08_03';
 
-use base qw/ Exporter /;
-our @EXPORT = qw(cwd getcwd fastcwd fastgetcwd);
-our @EXPORT_OK = qw(chdir abs_path fast_abs_path realpath fast_realpath);
+@ISA = qw/ Exporter /;
+@EXPORT = qw(cwd getcwd fastcwd fastgetcwd);
+@EXPORT_OK = qw(chdir abs_path fast_abs_path realpath fast_realpath);
 
 # sys_cwd may keep the builtin command
 

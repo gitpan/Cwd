@@ -1,5 +1,13 @@
 Revision history for Perl extension Cwd.
 
+2.08_03
+
+ - Make sure the correct version of Cwd.pm is loaded in the regression
+   tests. [Sam Vilain]
+
+ - Removed some gratuitous uses of 5.6-isms like our(), with the aim
+   of backporting this module to perl 5.005.
+
 2.08_02  Thu Aug 21 11:41:27 CDT 2003
 
  - Removed some redundant OS/2 code at the suggestion of Michael
