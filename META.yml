@@ -1,16 +1,21 @@
-# http://module-build.sourceforge.net/META-spec.html
-#XXXXXXX This is a prototype!!!  It will change in the future!!! XXXXX#
-name:         Cwd
-version:      2.15
-version_from: Cwd.pm
-installdirs:  perl
+--- #YAML:1.0
+name: Cwd
+version: 2.16
+author:
+  - Originally by the perl5-porters.
+abstract: get pathname of current working directory
+license: perl
 requires:
-    Carp:                          0
-    File::Path:                    0
-    File::Spec:                    0
-    Scalar::Util:                  0
-    Test::More:                    0
-    XSLoader:                      0
-
-distribution_type: module
-generated_by: ExtUtils::MakeMaker version 6.21
+  Carp: 0
+  File::Spec: 0
+  XSLoader: 0
+build_requires:
+  File::Path: 0
+  Module::Build: 0.19
+  Scalar::Util: 0
+  Test::More: 0
+provides:
+  Cwd:
+    file: Cwd.pm
+    version: 2.16
+generated_by: Module::Build version 0.23
