@@ -12,6 +12,9 @@ Revision history for Perl extension Cwd.
    current working directory of the specified drive/volume.
    [Steve Hay]
 
+ - Fixed a problem on perl 5.6.2 when built with the MULTIPLICITY
+   compile-time flags. [Yitzchak Scott-Thoennes]
+
  - When looking for a `pwd` system command, we no longer assume the
    path separator is ':'.
 

@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name: Cwd
-version: 2.17_02
+version: 2.17_03
 author:
   - |-
     Now maintained by Ken Williams <KWILLIAMS@cpan.org>
@@ -18,5 +18,5 @@ build_requires:
 provides:
   Cwd:
     file: Cwd.pm
-    version: 2.17_02
-generated_by: Module::Build version 0.25
+    version: 2.17_03
+generated_by: Module::Build version 0.25_01
