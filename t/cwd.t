@@ -11,7 +11,7 @@ use warnings;
 use File::Spec;
 use File::Path;
 
-use Test::More tests => 20;
+use Test::More tests => 21;
 
 my $IsVMS = $^O eq 'VMS';
 my $IsMacOS = $^O eq 'MacOS';
@@ -141,6 +141,9 @@ SKIP: {
     rmtree($test_dirs[0], 0, 0);
     unlink "linktest";
 }
+
+# Make sure we can run abs_path() on files, not just directories
+dir_ends_with(Cwd::abs_path('cwd.t'), 'cwd.t', 'abs_path() can be invoked on a file');
 
 #############################################
 # These two routines give us sort of a poor-man's cross-platform
