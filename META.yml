@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name: Cwd
-version: 2.08
+version: 2.08_04
 license: perl
 distribution_type: module
 requires:
@@ -10,11 +10,12 @@ requires:
 recommends: {}
 build_requires:
   File::Path: 0
+  Module::Build: 0.19
   Scalar::Util: 0
   Test::More: 0
 conflicts: {}
 provides:
   Cwd:
     file: Cwd.pm
-    version: 2.08
-generated_by: Module::Build version 0.20_01
+    version: 2.08_04
+generated_by: Module::Build version 0.21

@@ -16,6 +16,7 @@ my $build = Module::Build->new
 		      'File::Path' => 0,
 		      'Test::More' => 0,
 		      'Scalar::Util' => 0,
+		      'Module::Build' => '0.19',
 		     },
    xs_files       => { 'Cwd.xs' => 'lib/Cwd.xs' },
    pm_files       => { 'Cwd.pm' => 'lib/Cwd.pm' },
