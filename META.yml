@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name: Cwd
-version: 2.20
+version: 2.21
 author:
   - Maintained by Ken Williams <KWILLIAMS@cpan.org>
 abstract: get pathname of current working directory
@@ -17,5 +17,5 @@ build_requires:
 provides:
   Cwd:
     file: Cwd.pm
-    version: 2.20
+    version: 2.21
 generated_by: Module::Build version 0.25_01

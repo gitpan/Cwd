@@ -17,6 +17,5 @@ WriteMakefile
                          },
           'INSTALLDIRS' => 'perl',
           'PL_FILES' => {},
-	  'NO_META' => 1
         )
 ;
