@@ -166,7 +166,7 @@ loop:
 		rootd = 0;
 
 	if (*wbuf) {
-		if (strlen(resolved) + strlen(wbuf) + rootd + 1 > MAXPATHLEN) {
+		if (strlen(resolved) + strlen(wbuf) + (1 - rootd) + 1 > MAXPATHLEN) {
 			errno = ENAMETOOLONG;
 			goto err1;
 		}
@@ -211,7 +211,7 @@ err2:
 }
 
 #ifndef getcwd_sv
-// Taken from perl 5.8's util.c
+/* Taken from perl 5.8's util.c */
 int getcwd_sv(pTHX_ register SV *sv)
 {
 #ifndef PERL_MICRO

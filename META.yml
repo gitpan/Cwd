@@ -1,21 +1,16 @@
---- #YAML:1.0
-name: Cwd
-version: 2.12
-license: perl
-distribution_type: module
+# http://module-build.sourceforge.net/META-spec.html
+#XXXXXXX This is a prototype!!!  It will change in the future!!! XXXXX#
+name:         Cwd
+version:      2.13
+version_from: Cwd.pm
+installdirs:  perl
 requires:
-  Carp: 0
-  File::Spec: 0
-  XSLoader: 0
-recommends: {}
-build_requires:
-  File::Path: 0
-  Module::Build: 0.19
-  Scalar::Util: 0
-  Test::More: 0
-conflicts: {}
-provides:
-  Cwd:
-    file: Cwd.pm
-    version: 2.12
-generated_by: Module::Build version 0.21
+    Carp:                          0
+    File::Path:                    0
+    File::Spec:                    0
+    Scalar::Util:                  0
+    Test::More:                    0
+    XSLoader:                      0
+
+distribution_type: module
+generated_by: ExtUtils::MakeMaker version 6.21
