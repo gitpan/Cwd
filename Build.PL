@@ -31,6 +31,7 @@ my $build = $class->new
 		     },
    xs_files       => { 'Cwd.xs' => 'lib/Cwd.xs' },
    pm_files       => { 'Cwd.pm' => 'lib/Cwd.pm' },
+   sign => 1,
   );
 
 $build->create_build_script;
