@@ -6,6 +6,8 @@ Revision history for Perl extension Cwd.
    only be called on directories, and died when called on files.  This
    was a problem in the pure-perl implementation _perl_abs_path().
 
+ - Fixed fast_abs_path($arg) in the same way as abs_path($arg) above.
+
  - On Win32, a function getdcwd($vol) has been added, which gets the
    current working directory of the specified drive/volume.
    [Steve Hay]

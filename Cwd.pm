@@ -1,5 +1,5 @@
 package Cwd;
-$VERSION = $VERSION = '2.17_01';
+$VERSION = $VERSION = '2.17_02';
 
 =head1 NAME
 
@@ -542,6 +542,29 @@ sub fast_abs_path {
     # we're not doing anything dangerous with it.
     ($path) = $path =~ /(.*)/;
     ($cwd)  = $cwd  =~ /(.*)/;
+
+    unless (-e $path) {
+ 	_croak("$path: No such file or directory");
+    }
+
+    unless (-d _) {
+        # Make sure we can be invoked on plain files, not just directories.
+	
+	my ($vol, $dir, $file) = File::Spec->splitpath($path);
+	return File::Spec->catfile($cwd, $path) unless length $dir;
+
+	if (-l $path) {
+	    my $link_target = readlink($path);
+	    die "Can't resolve link $path: $!" unless defined $link_target;
+	    
+	    $link_target = File::Spec->catpath($vol, $dir, $link_target)
+                unless File::Spec->file_name_is_absolute($link_target);
+	    
+	    return fast_abs_path($link_target);
+	}
+	
+	return fast_abs_path(File::Spec->catpath($vol, $dir, '')) . '/' . $file;
+    }
 
     if (!CORE::chdir($path)) {
  	_croak("Cannot chdir to $path: $!");
