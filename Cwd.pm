@@ -1,5 +1,5 @@
 package Cwd;
-$VERSION = $VERSION = '2.18';
+$VERSION = $VERSION = '2.18_01';
 
 =head1 NAME
 
@@ -597,11 +597,11 @@ sub _vms_cwd {
 
 sub _vms_abs_path {
     return $ENV{'DEFAULT'} unless @_;
+
+    # may need to turn foo.dir into [.foo]
     my $path = VMS::Filespec::pathify($_[0]);
-    if (! defined $path)
-	{
-	_croak("Invalid path name $_[0]")
-	}
+    $path = $_[0] unless defined $path;
+
     return VMS::Filespec::rmsexpand($path);
 }
 
