@@ -8,5 +8,6 @@ MANIFEST			This list of files
 META.yml
 t/cwd.t
 t/taint.t
+t/win32.t
 
 SIGNATURE    Added here by Module::Build
