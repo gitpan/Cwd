@@ -4,13 +4,12 @@ use ExtUtils::MakeMaker;
 WriteMakefile
   (
    NAME        => 'Cwd',
-   VERSION     => '2.09',
+   VERSION     => '2.11',
    PL_FILES    => {},
    INSTALLDIRS => 'perl',
    PREREQ_PM   => {
 		 'Scalar::Util' => '0',
 		 'File::Spec' => '0',
-		 'Module::Build' => '0.19',
 		 'XSLoader' => '0',
 		 'File::Path' => '0',
 		 'Test::More' => '0',
