@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name: Cwd
-version: 2.16
+version: 2.17
 author:
   - Originally by the perl5-porters.
 abstract: get pathname of current working directory
@@ -17,5 +17,5 @@ build_requires:
 provides:
   Cwd:
     file: Cwd.pm
-    version: 2.16
+    version: 2.17
 generated_by: Module::Build version 0.23
