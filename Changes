@@ -1,0 +1,15 @@
+Revision history for Perl extension Cwd.
+
+2.08_02  Thu Aug 21 11:41:27 CDT 2003
+
+ - Removed some redundant OS/2 code at the suggestion of Michael
+   Schwern and Ilya Zakharevich.
+
+ - Simplified all code that autoloads Carp.pm and calls
+   carp()/croak().
+
+2.08_01  Tue Aug 19 12:24:04 2003
+
+  - Code extracted from bleadperl/maintperl and packaged as a separate
+    testing release by Ken Williams.  Very few significant changes, if
+    any.  Not released to CPAN, but circulated among a few testers.

@@ -1,0 +1,20 @@
+--- #YAML:1.0
+name: Cwd
+version: 2.08_02
+license: perl
+distribution_type: module
+requires:
+  Carp: 0
+  File::Spec: 0
+  XSLoader: 0
+recommends: {}
+build_requires:
+  File::Path: 0
+  Scalar::Util: 0
+  Test::More: 0
+conflicts: {}
+provides:
+  Cwd:
+    file: Cwd.pm
+    version: 2.08_02
+generated_by: Module::Build version 0.19_05

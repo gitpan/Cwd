@@ -1,5 +1,10 @@
+Build.PL
+Changes
 Cwd.pm
 Cwd.xs
-MANIFEST
+INSTALL
+MANIFEST			This list of files
+META.yml
 Makefile.PL
-t/Cwd.t
+t/cwd.t
+t/taint.t
